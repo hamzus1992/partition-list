@@ -30,16 +30,15 @@ target/partition-list-X.X.X-SNAPSHOT.jar
  */
 public interface PartitionList<T> {
 	
-	/**
-	 * Return a list of sublists.
-	 * 
-	 * @param list the list of elements
-	 * @param partitionMaxSize the maximum size of partition of a sublist
-	 *   
-	 * @return the list of sublists
-	 */
-	List<List<T>> partition(List<T> list, int partitionMaxSize);
-
+  /**
+   * Return a list of sublists.
+   * 
+   * @param list the list of elements
+   * @param partitionMaxSize the maximum size of partition of a sublist
+   *   
+   * @return the list of sublists
+   */
+  List<List<T>> partition(List<T> list, int partitionMaxSize);
 }
 ```
 ## How to use
@@ -59,19 +58,22 @@ import com.github.munozy.partition.list.factory.PartitionListFactory;
  *
  */
 public class PartitionApp {
-	public static void main(String[] args) {
-		// Other way is: PartitionListFactory.getInstance().createPartitionList("default")
-		PartitionList<Integer> partitionList = PartitionListFactory.getInstance().createPartitionList();
-		// Input
+  public static void main(String[] args) {
+    
+    // Other way is: PartitionListFactory.getInstance().createPartitionList("default")
+    PartitionList<Integer> partitionList = PartitionListFactory.getInstance().createPartitionList();	
+    
+    // Input
     List<Integer> list = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5));
+    
     // Maximum size of sublist partition
     int partitionMaxSize = 2;
     
     //Output
-		for (List<Integer> partion : partitionList.partition(list, partitionMaxSize)) {
-			System.out.print(partion);
-		}
-	}
+    for (List<Integer> partion : partitionList.partition(list, partitionMaxSize)) {
+       System.out.print(partion);
+    }
+  }
 }
 ```
 #### Input
