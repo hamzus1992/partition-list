@@ -63,9 +63,11 @@ public class PartitionApp {
     // Other way is: PartitionListFactory.getInstance().createPartitionList("default")
     PartitionList<Integer> partitionList = PartitionListFactory.getInstance().createPartitionList();	
     
-    // Input
-    List<Integer> list = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5));
-    
+    /*
+     * Inputs
+     */
+    // List of elements
+    List<Integer> list = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5));   
     // Maximum size of sublist partition
     int partitionMaxSize = 2;
     
@@ -76,10 +78,10 @@ public class PartitionApp {
   }
 }
 ```
-#### Input
+#### Inputs
  
 ```
-[1,2,3,4,5]
+([1,2,3,4,5], 2)
  ```
 #### Output
  
