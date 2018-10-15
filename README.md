@@ -14,7 +14,7 @@ Or by building locally the project
 ```
 mvn package
 ```
-And the take generated jar file
+And take generated jar file
 ```
 target/partition-list-X.X.X-SNAPSHOT.jar
 ```
